@@ -14,8 +14,6 @@ public record Book (
     @Id
     Long id,
 
-//    String publisher,
-
     @NotBlank(message = "The book ISBN must be defined.")
     @Pattern(regexp = "^([0-9]{10}|[0-9]{13})$", message = "The ISBN format must be valid.")
     String isbn,
@@ -30,6 +28,8 @@ public record Book (
     @Positive(message = "The book price must be greater than zero.")
     Double price,
 
+    String publisher,
+
     @CreatedDate
     Instant createdDate,
 
@@ -41,8 +41,8 @@ public record Book (
     
 ){
     public static Book of(
-        String isbn, String title, String author, Double price
+        String isbn, String title, String author, Double price, String publisher
     ) {
-        return new Book(null, isbn, title, author, price, null, null, 0);
+        return new Book(null, isbn, title, author, price, publisher, null, null, 0);
     }
 }
