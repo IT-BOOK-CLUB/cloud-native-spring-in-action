@@ -62,3 +62,9 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=line8400!
       - POSTGRES_DB=polardb_catalog
+
+  polar-redis:
+    image: "redis:7.0"
+    container_name: "polar-redis"
+    ports:
+      - 6379:6379

@@ -73,6 +73,12 @@ bootBuildImage {
 	}
 }
 
+tasks.bootBuildImage {
+	docker {
+		host = "//./pipe/dockerDesktopLinuxEngine"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
