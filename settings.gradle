@@ -2,3 +2,5 @@ rootProject.name='cloud-native-spring-in-action'
 
 include 'PolarBookshop:catalog-service'
 include 'PolarBookshop:config-service'
+include 'PolarBookshop:order-service'
+include 'PolarBookshop:edge-service'
